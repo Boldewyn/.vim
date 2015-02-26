@@ -1,0 +1,1 @@
+highlight DiffFile ctermfg=white
