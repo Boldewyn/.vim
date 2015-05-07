@@ -246,6 +246,9 @@ nnoremap <leader><space> :noh<CR>
 noremap <leader>h :exe "normal " . winwidth(0)/2. "h"<CR>
 noremap <leader>l :exe "normal " . winwidth(0)/2. "l"<CR>
 
+" un-camelcase below cursor: A -> _a
+noremap <Leader>c i_<Esc>lgul
+
 if has("eval")
   " Abbreviation: Current time
   iab <expr> NOW! strftime("%FT%T%z")
