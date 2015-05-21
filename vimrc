@@ -11,7 +11,7 @@ endif
 
 try
   " start pathogen
-  call pathogen#runtime_append_all_bundles()
+  execute pathogen#infect()
 catch
 endtry
 
