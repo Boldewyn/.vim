@@ -90,8 +90,10 @@ set <C-Right>=[1;5C
 set backspace=indent,eol,start
 set history=1000
 set undolevels=1000
-set undodir=~/tmp,/var/tmp,/tmp
-set undofile
+if version >= 703
+  set undodir=~/tmp,/var/tmp,/tmp
+  set undofile
+endif
 set directory=~/tmp,/var/tmp,/tmp      " don't store swp files together with the originals
 set nottimeout    " don't timeout for mappings
 if executable("ack")
