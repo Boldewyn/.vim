@@ -315,3 +315,7 @@ let php_folding = 1
 " command! -range=% Tidy !tidy -q -asxml -utf8 -w 200 -i 2>/dev/null
 
 
+" skip taglist plugin, if not available
+if !executable('ctags') && !executable('ctags')
+  let loaded_taglist = 'no'
+endif
