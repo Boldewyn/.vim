@@ -99,7 +99,7 @@ set nottimeout    " don't timeout for mappings
 if executable("ack")
   set grepprg=ack
 endif
-set iskeyword-=/
+set iskeyword-=/:
 
 " files, formats, encodings
 set encoding=utf-8
@@ -194,7 +194,10 @@ if has("autocmd")
   autocmd FileType python set tags+=$HOME/.vim/tags/python26.ctags
 
   " map *.md to Markdown
-  autocmd! filetypedetect BufNewFile,BufRead *.md setfiletype markdown
+  autocmd! filetypedetect BufNewFile,BufRead *.md set filetype=markdown
+
+  " map *.journal to Ledger
+  autocmd BufEnter *.journal setlocal filetype=ledger
 
   " autostart NERDTree
   if &columns > 140
@@ -314,6 +317,8 @@ let php_folding = 1
 
 " command! -range=% Tidy !tidy -q -asxml -utf8 -w 200 -i 2>/dev/null
 
+" configure the ledger ftplugin
+let g:ledger_maxwidth = 76
 
 " skip taglist plugin, if not available
 if !executable('ctags') && !executable('ctags')
