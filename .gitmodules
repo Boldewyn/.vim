@@ -1,0 +1,45 @@
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "bundle/vim-repeat"]
+	path = bundle/vim-repeat
+	url = git@github.com:tpope/vim-repeat.git
+[submodule "bundle/vim-surround"]
+	path = bundle/vim-surround
+	url = git@github.com:tpope/vim-surround.git
+[submodule "bundle/vim-eunuch"]
+	path = bundle/vim-eunuch
+	url = git@github.com:tpope/vim-eunuch.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = git@github.com:plasticboy/vim-markdown.git
+[submodule "bundle/vim-speeddating"]
+	path = bundle/vim-speeddating
+	url = git@github.com:tpope/vim-speeddating.git
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = git@github.com:mileszs/ack.vim.git
+[submodule "bundle/vim-afterimage"]
+	path = bundle/vim-afterimage
+	url = git@github.com:tpope/vim-afterimage.git
+[submodule "bundle/vim-ledger"]
+	path = bundle/vim-ledger
+	url = git@github.com:ledger/vim-ledger.git
+[submodule "bundle/vim-argumentative"]
+	path = bundle/vim-argumentative
+	url = git@github.com:PeterRincker/vim-argumentative.git
+[submodule "bundle/nerdtree"]
+	path = bundle/nerdtree
+	url = git@github.com:scrooloose/nerdtree.git
+[submodule "bundle/vim-css-color"]
+	path = bundle/vim-css-color
+	url = git@github.com:ap/vim-css-color.git
+[submodule "bundle/PHP-Indenting-for-VIm"]
+	path = bundle/PHP-Indenting-for-VIm
+	url = git@github.com:2072/PHP-Indenting-for-VIm.git
+[submodule "bundle/vim-mustache-handlebars"]
+	path = bundle/vim-mustache-handlebars
+	url = git@github.com:mustache/vim-mustache-handlebars.git
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
