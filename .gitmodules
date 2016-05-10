@@ -43,3 +43,6 @@
 [submodule "bundle/emmet-vim"]
 	path = bundle/emmet-vim
 	url = git@github.com:mattn/emmet-vim.git
+[submodule "bundle/yajs.vim"]
+	path = bundle/yajs.vim
+	url = git@github.com:othree/yajs.vim.git
