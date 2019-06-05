@@ -91,10 +91,10 @@ set backspace=indent,eol,start
 set history=1000
 set undolevels=1000
 if version >= 703
-  set undodir=~/tmp,/var/tmp,/tmp
+  set undodir=~/tmp/vimtmp,/var/tmp,/tmp
   set undofile
 endif
-set directory=~/tmp,/var/tmp,/tmp      " don't store swp files together with the originals
+set directory=~/tmp/vimtmp,/var/tmp,/tmp      " don't store swp files together with the originals
 set nottimeout    " don't timeout for mappings
 if executable("ack")
   set grepprg=ack
@@ -111,6 +111,10 @@ if has("autocmd")
   filetype on
   filetype indent on
   filetype plugin on
+endif
+
+if v:version > 703 || v:version == 703 && has("patch541")
+  set formatoptions+=j " Delete comment character when joining commented lines
 endif
 
 " Force using hjkl
@@ -161,7 +165,7 @@ if has("autocmd")
   autocmd BufNewFile,BufRead *.php setlocal iskeyword-=$ comments=s1:/*,mb:*,ex:*/,://,:#
 
   " set tab width to 2 for HTML, CSS and JS files
-  autocmd FileType {mako,vim,html,xhtml,xml,xslt,dtd,svg,css,scss,javascript,json,htmldjango,smarty,mustache} setlocal shiftwidth=2 softtabstop=2 tabstop=2
+  autocmd FileType {mako,vim,html,xhtml,xml,xslt,dtd,svg,css,scss,javascript,json,htmldjango,smarty,mustache,yaml} setlocal shiftwidth=2 softtabstop=2 tabstop=2
   "autocmd FileType {html,xhtml,xml,xslt,dtd,svg,htmldjango,smarty,mako} setlocal nocindent nosmartindent indentexpr=
 
   " set tabs for Makefiles
@@ -239,9 +243,13 @@ let Tlist_Enable_Fold_Column = 0
 " toggle the NERDTree with <F9>
 noremap <silent> <F9> :NERDTreeToggle %:p:h<CR>
 
-" PHP short tags enabled ;-)
-inoremap <?=       <lt>?php<Space>echo<Space>
 inoremap <lt>PHPCLASS  <lt>?php if(!defined('BASEPATH'))<Space>exit('No<Space>direct<Space>access!');<CR><CR>/**<CR><Space>*<CR><Space>*/<CR>class<Space>Hello<Space>{<CR><CR><Space><Space><Space><Space>public<Space>function<Space>__construct()<Space>{<CR><Space><Space><Space><Space>}<CR><CR>}<CR><CR>//__END__
+
+inoremap :shrug: ¯\_(ツ)_/¯
+
+inoremap nshtml xmlns="http://www.w3.org/1999/xhtml"
+inoremap nsxlink xmlns="http://www.w3.org/1999/xlink"
+inoremap nssvg xmlns="http://www.w3.org/2000/svg"
 
 " Map for tab commands
 nnoremap <C-t> :tabnew<CR>

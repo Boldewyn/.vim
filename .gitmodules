@@ -46,3 +46,6 @@
 [submodule "bundle/yajs.vim"]
 	path = bundle/yajs.vim
 	url = git@github.com:othree/yajs.vim.git
+[submodule "bundle/editorconfig-vim"]
+	path = bundle/editorconfig-vim
+	url = git@github.com:editorconfig/editorconfig-vim.git
