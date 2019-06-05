@@ -332,3 +332,7 @@ let g:ledger_maxwidth = 76
 if !executable('ctags') && !executable('ctags')
   let loaded_taglist = 'no'
 endif
+
+if filereadable(expand('~/.vim/localrc'))
+  exe 'source' '~/.vim/localrc'
+endif
