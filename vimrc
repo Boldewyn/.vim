@@ -336,3 +336,6 @@ endif
 if filereadable(expand('~/.vim/localrc'))
   exe 'source' '~/.vim/localrc'
 endif
+
+" disable Markdown folding, that always gets in the way when editing
+let g:vim_markdown_folding_disabled = 1
