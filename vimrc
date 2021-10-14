@@ -233,7 +233,7 @@ let g:html_indent_inctags = "html,body,head,tbody"
 inoremap <C-CR> <Esc><Right>
 inoremap <S-CR> <Esc><Right>
 " insert <CR> in normal mode via \<CR>
-noremap <Leader><Enter> i<CR><Esc>
+noremap <Leader><Enter> a<CR><Esc>
 
 " toggle the taglist with <F8>
 noremap <silent> <F8> :TlistToggle<CR>
@@ -339,3 +339,6 @@ endif
 
 " disable Markdown folding, that always gets in the way when editing
 let g:vim_markdown_folding_disabled = 1
+
+" vim-vue: disable detection to speed up plugin (cf. readme)
+let g:vue_disable_pre_processors = 1
